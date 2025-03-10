@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jona_raw Fotografía</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sección Hero con Video de Fondo -->
+    <section class="hero" id="hero-section">
+        <video class="hero-video" autoplay loop muted>
+            <source src="videos/portada.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+        <div class="hero-content">
+            <h1>Jona_raw Fotografía</h1>
+            <p>Capturando momentos inolvidables</p>
+            <a href="#" class="btn" onclick="iniciarPaquetes()">Ver Paquetes</a>
+        </div>
+    </section>
+
+    <!-- Sección de Paquetes -->
+    <section class="paquetes-section" id="paquetes-section" style="display: none;">
+        <h2>Nuestros Paquetes</h2>
+
+        <div class="paquetes-container">
+           
+            <div class="paquete" onclick="mostrarCarrusel('bodas')">
+                <img src="imagenes/boda_portada.jpg" alt="Bodas">
+                <div class="paquete-info">
+                    <h3>Bodas</h3>
+                    <p>Capturamos cada momento de tu día especial.</p>
+                </div>
+            </div>
+
+            <div class="paquete" onclick="mostrarCarrusel('producto')">
+                <img src="imagenes/producto_portada.jpg" alt="Producto">
+                <div class="paquete-info">
+                    <h3>Producto</h3>
+                    <p>Recuerdos inolvidables de tus productos.</p>
+                </div>
+            </div>
+
+            <div class="paquete" onclick="mostrarCarrusel('retratos')">
+                <img src="imagenes/retratos_portada.jpg" alt="Retratos">
+                <div class="paquete-info">
+                    <h3>Retratos</h3>
+                    <p>Retratos que resaltan tu esencia.</p>
+                </div>
+            </div>
+
+            <div class="paquete" onclick="mostrarCarrusel('sociales')">
+                <img src="imagenes/sociales_portada.jpg" alt="Eventos Sociales">
+                <div class="paquete-info">
+                    <h3>Eventos Sociales</h3>
+                    <p>Fotografías vibrantes para cualquier ocasión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel de imágenes -->
+    <div id="carrusel-container">
+        <div id="carrusel">
+            <span class="close" onclick="cerrarCarrusel()">×</span>
+            <button class="prev" onclick="cambiarImagen(-1)">‹</button>
+            <img id="imagen-carrusel" class="carrusel-img" src="">
+            <p id="descripcion"></p>
+            <button class="next" onclick="cambiarImagen(1)">›</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
