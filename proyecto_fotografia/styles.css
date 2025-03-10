@@ -203,26 +203,66 @@ button {
     .prev, .next {
         font-size: 2.5rem;
     }
-     .gallery {
+}
+
+/* 📌 Ajuste para que el video se adapte a cualquier pantalla */
+.hero-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 1;
+}
+
+
+        /* Sección de Iconos Sociales */
+        .social-icons {
+            margin-top: 20px;
             display: flex;
-            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
         }
-        .gallery-item {
-            display: flex;
-            flex-direction: column; /* Asegura que el texto esté debajo de la imagen */
-            align-items: center;
-            text-align: center;
-            width: 200px;
+
+        .social-icons a {
+            display: inline-block;
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
         }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
+
+        .social-icons .whatsapp {
+            background: url('https://cdn-icons-png.flaticon.com/512/124/124034.png') no-repeat center;
+            background-size: contain;
+            width: 35px;
+            height: 35px;
+            display: inline-block;
+            transition: transform 0.3s;
         }
-        .gallery-item p {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
+
+        .social-icons .whatsapp:hover {
+            transform: scale(1.1);
         }
-}
+
+        .social-icons .instagram {
+            background: url('https://cdn-icons-png.flaticon.com/512/174/174855.png') no-repeat center;
+            background-size: contain;
+            width: 35px;
+            height: 35px;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .social-icons .instagram:hover {
+            transform: scale(1.1);
+        }
